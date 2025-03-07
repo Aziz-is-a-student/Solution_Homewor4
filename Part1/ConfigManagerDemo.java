@@ -1,3 +1,5 @@
+package Part1;
+
 public class ConfigManagerDemo {
     public static void main(String[] args) {
     ConfigurationManager configurationManager = ConfigurationManager.getInstance();
