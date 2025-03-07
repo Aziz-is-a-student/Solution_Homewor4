@@ -1,9 +1,16 @@
 public class ConfigManagerDemo {
     public static void main(String[] args) {
+    ConfigurationManager configurationManager = ConfigurationManager.getInstance();
+        System.out.println(configurationManager);
+        System.out.println(configurationManager.getConfig("defaultLanguage"));
 
-        ConfigurationManager singleton = ConfigurationManager.getInstance();
-        System.out.println(singleton);
-        ConfigurationManager singleton2 = ConfigurationManager.getInstance();
-        System.out.println(singleton2);
+        configurationManager.printConfigs();
+        System.out.println("\n\nSecond ConfigurationManager");
+        ConfigurationManager configurationManager2 = ConfigurationManager.getInstance();
+        System.out.println(configurationManager2);
+        System.out.println(configurationManager2.getConfig("defaultLanguage"));
+
+        configurationManager2.printConfigs();
+
     }
 }
